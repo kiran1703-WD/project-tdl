@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+  color: #ffff;
+  background: rgb(245, 11, 155);
+}
+body{
+  width: 100%;
+  height: 100vh;
+   overflow: hidden; 
+  padding: 10px;
+  background-size: cover;
+  background: fixed,url(166717.jpg);
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+.navbar{
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+nav{
+  flex: 1;
+  text-align: right;
+}
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+}
+.wrapper{
+  background: transparent;
+  max-width: 400px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 7px 7px 25px rgba(0,0,0,0.9);
+}
+
+header{
+  color: white;
+}
+
+.wrapper header{
+  font-size: 30px;
+  font-weight: 600;
+}
+.wrapper .inputField{
+ /* margin: 20px 0;*/
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  height: 45px;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+ /* color: #ff6f47;*/
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-color: teal;
+  border-radius: 4px;
+
+}
+
+select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff6f47;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+select:hover::after {
+  background-color: #fff;
+  color: #ff6f47;
+}
+
+.prioritybt > button{
+  height: 30px;
+  width: 70px;
+  color: #fff;
+  margin-left: 35px;
+  margin-top: 10px;
+  border-radius: 10px 0px 10px 0px;
+  border: 0px;
+  opacity: 0.8;
+}
+#Hbt{ 
+  background-color: rgb(238, 59, 59);
+}
+#Hbt:focus{ 
+  background-color: rgb(177, 2, 2);
+  transform:scale3d(1.5, 1.5, 1.5) ;
+}
+
+#Mbt{
+  background-color: rgb(248, 182, 60);
+}
+#Mbt:focus{ 
+  background-color: rgb(223, 146, 3);
+  transform:scale3d(1.5, 1.5, 1.5) ;
+}
+
+#Lbt{
+  background-color: rgb(49, 235, 49);
+}
+#Lbt:focus{ 
+  background-color: rgb(2, 121, 2);
+  transform:scale3d(1.5, 1.5, 1.5) ;
+}
+
+.inputField input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+.inputField input:focus{
+  border-color: #49d6e8;
+}
+.inputField button{
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: #fff;
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: #49c3e8;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.inputField button:hover,
+.footer button:hover{
+  background: #1c93e3;
+}
+.inputField button.active{
+  opacity: 0.6;
+  pointer-events: auto;
+}
+.wrapper .todoList{
+  margin-top: 70px;
+  max-height: 250px;
+  overflow-y: auto;
+  /*overflow: hidden;*/
+}
+::-webkit-scrollbar{
+  width: auto;
+}
+::-webkit-scrollbar-track{
+  border: 5px solid whitesmoke;
+  box-shadow: inset 0 0 15px whitesmoke;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient( rgb(184, 237, 250),rgb(122, 191, 248));
+  border-radius: 20px;
+}
+.todoList li{
+  position: relative;
+  list-style: none;
+  height: 45px;
+  line-height: 45px;
+  margin-bottom: 8px;
+  background: #f2f2f2;
+  border-radius: 3px;
+  padding: 0 15px;
+  cursor: default;
+  overflow: hidden;
+}
+.todoList li .icon{
+  position: absolute;
+  right: -45px;
+  background: #e74c3c;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.todoList li:hover .icon{
+  right: 0px;
+}
+
+.footer span{
+  color: white;
+}
+
+.wrapper .footer{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer button{
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background: #49c3e8;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.2;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.footer button.active{
+  opacity: 0.8;
+  pointer-events: auto;
+}

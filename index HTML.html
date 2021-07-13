@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="To-Do-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+        <h4 style="align-self: auto; color:azure;"><i class="fas fa-stream"></i> ToDoList App</h4>
+        <nav>
+            <ul>
+                <li><a href="http://www.google.com/">SEARCH</a></li>
+                <li><a href="https://www.youtube.com/">LEARN</a></li>
+                <li><a href="https://www.youtube.com/">EXPLORE</a></li>
+            </ul>
+        </nav>
+
+    </div>
+  <div class="wrapper">
+    <header>ToDoList</header>
+    <div class="inputField">
+     <span> 
+       <input type="text" placeholder="Add new task "> 
+       <span><select  class="filter-todo">
+      <option value="high">High</option>
+      <option value="medium">Medium</option>
+      <option value="low">Low</option></select></span>
+    </span>
+      <button><i class="fas fa-plus"></i></button>
+    </div>
+
+    <ul class="todoList">
+      <!-- data are comes from local storage -->
+    </ul>
+
+    <div class="prioritybt">
+    <button id="Hbt">High</button>
+    <button id="Mbt">Medium</button>
+    <button id="Lbt">Low</button>
+    </div>
+
+    <div class="footer">
+      <span>You have <span class="pendingTasks"></span> pending tasks</span>
+      <button>Clear All</button>
+    </div>
+  </div>
+
+  <script src="To-Do-Main.js"></script>
+  
+    <marquee behavior="scroll" direction="right" scrollamount="10" width="100%" vspace="7%">By:-KIRAN PARASHAR</marquee>
+  
+</body>
+</html>
