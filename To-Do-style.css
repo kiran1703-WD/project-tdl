@@ -12,10 +12,11 @@
 body{
   width: 100%;
   height: 100vh;
-   overflow: hidden; 
+  /* overflow: hidden; */
   padding: 10px;
   background-size: cover;
-  background: fixed,url(166717.jpg);
+  background-repeat: no-repeat;
+  background: center,url(166717.jpg);
 }
 
 .container{
@@ -23,14 +24,14 @@ body{
   height: 100vh;
   background-position: center;
   background-size: cover;
-  padding-left: 8%;
-  padding-right: 8%;
   box-sizing: border-box;
 }
 .navbar{
   height: 12%;
   display: flex;
   align-items: center;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 nav{
   flex: 1;
@@ -65,7 +66,6 @@ header{
   font-weight: 600;
 }
 .wrapper .inputField{
- /* margin: 20px 0;*/
   margin: 20px 0;
   width: 100%;
   display: flex;
@@ -116,14 +116,17 @@ select:hover::after {
   margin-top: 10px;
   border-radius: 10px 0px 10px 0px;
   border: 0px;
-  opacity: 0.8;
+  opacity: 0.7;
+ /* pointer-events: none;
+  transition: all 0.3s ease;*/
 }
 #Hbt{ 
   background-color: rgb(238, 59, 59);
 }
 #Hbt:focus{ 
-  background-color: rgb(177, 2, 2);
-  transform:scale3d(1.5, 1.5, 1.5) ;
+  background-color: rgb(204, 4, 4);
+  transform: scale3d(1.5, 1.5, 1.5) ;
+  transition: all 0.3s ease;
 }
 
 #Mbt{
@@ -131,7 +134,8 @@ select:hover::after {
 }
 #Mbt:focus{ 
   background-color: rgb(223, 146, 3);
-  transform:scale3d(1.5, 1.5, 1.5) ;
+  transform: scale3d(1.5, 1.5, 1.5) ;
+  transition: all 0.3s ease;
 }
 
 #Lbt{
@@ -139,7 +143,8 @@ select:hover::after {
 }
 #Lbt:focus{ 
   background-color: rgb(2, 121, 2);
-  transform:scale3d(1.5, 1.5, 1.5) ;
+  transform: scale3d(1.5, 1.5, 1.5) ;
+  transition: all 0.3s ease;
 }
 
 .inputField input{
@@ -210,7 +215,7 @@ select:hover::after {
 .todoList li .icon{
   position: absolute;
   right: -45px;
-  background: #e74c3c;
+  background: #726f6f;
   width: 45px;
   text-align: center;
   color: #fff;
@@ -252,4 +257,80 @@ select:hover::after {
 .footer button.active{
   opacity: 0.8;
   pointer-events: auto;
+}
+
+footer{
+  margin-top: 50px;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.inner-footer{
+  margin: 0;
+  padding: 0;
+  background-color: #272727;
+}
+
+.social-links{
+  display: flex;
+}
+
+.social-links ul{
+  padding: 10px;
+  display: flex;
+  width: 300px;
+  height: 100px;
+  margin:  auto;
+}
+
+.social-items{
+  list-style: none;
+}
+
+.social-items a{
+  padding: 10px 20px;
+  font-size: 35px;
+  color: #6cccc6;
+  transition: all .25s;
+}
+
+.social-items a:hover{
+  color: #6cccc6;
+}
+
+.quick-links{
+  display: flex;
+  width: 600px;
+  height: 100px;
+  margin: auto;
+}
+
+.quick-links ul{
+  display: flex;
+}
+
+.quick-items{
+  list-style: none;
+}
+
+.quick-items a{
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-left: 5px;
+  font-size: 18px;
+  color: white;
+  transition: all .25s;
+}
+
+.quick-items a:hover{
+  color: #6cccc6;
+}
+
+.outer-footer{
+  margin-bottom: 0;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  background-color: #3f3f3f;
 }
